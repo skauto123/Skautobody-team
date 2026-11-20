@@ -215,7 +215,7 @@ input, select {
 
 .week { display: grid; gap: 10px; }
 
-.day { min-width: 0; padding: 12px; }
+.day { min-width: 0; max-width: 100%; padding: 12px; overflow: hidden; }
 
 .day.today { border-color: var(--accent); }
 
@@ -223,7 +223,7 @@ input, select {
 
 .num { font-size: 22px; }
 
-.task-list { display: grid; gap: 8px; margin-top: 10px; }
+.task-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 10px; min-width: 0; }
 
 .task {
   width: 100%;
@@ -246,7 +246,7 @@ input, select {
 
 .task-copy { display: grid; min-width: 0; flex: 1; }
 
-.task-title { font-weight: 700; overflow-wrap: break-word; }
+.task-title { min-width: 0; font-weight: 700; overflow-wrap: anywhere; }
 
 .who, .flag { color: var(--muted); font-size: 13px; font-weight: 650; }
 
